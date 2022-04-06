@@ -7,12 +7,12 @@ import main
 
 root = Tk()
 root.title("Malicious Url Detector")
-img = PhotoImage(width=300,height=300)
+img = PhotoImage(width=500,height=500)
 data = ("{red red red red blue blue blue blue}")
-root.attributes('-alpha',0.9)
+root.attributes('-alpha',1.9)
 root.iconbitmap(r'malware.ico')
 #root.configure(background='thistle')
-#root.geometry("800x100")
+#root.geometry("1000x250")
 frame = Frame(root)
 frame.pack()
 bottomframe = Frame(root)
@@ -20,7 +20,7 @@ bottomframe.pack(side=BOTTOM)
 
 L1 = Label(frame, text="Enter the URL: ")
 L1.pack(side=LEFT)
-E1 = Entry(frame, bd=5, width=150)
+E1 = Entry(frame, bd=8, width=300)
 E1.pack(side=RIGHT)
 
 
@@ -50,13 +50,13 @@ def submitCallBack():
         tkMessageBox.showwarning("Warning","Cant Redirect, url contains a malware")
 
 def about():
-    tkMessageBox.showinfo("About","Authors: vijay maripi")
+    tkMessageBox.showinfo("About","Authors: Vamsi Krishna Raja , Sandeep , Yashwanthi")
 
 
 B2 = Button(root, text="About", command=about)
 B1 = Button(bottomframe, text="Submit", command=submitCallBack)
-B2.pack(side=RIGHT, padx=5, pady=5)
-B1.pack(side=RIGHT, padx=5,pady=5)
+B2.pack(side=RIGHT, padx=10, pady=10)
+B1.pack(side=RIGHT, padx=10,pady=10)
 root.mainloop()
 
 
